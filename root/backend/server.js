@@ -14,6 +14,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(expressSession({
+    secret: "secretcode",
+    resave: true,
+    saveUninitialized: true
+}));
+
+
+//whenever you call the secret inside session you need to use cookieParser
+
 app.listen(4000, ()=> {
     console.log("Server up and running...");
 });

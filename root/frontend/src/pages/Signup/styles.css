@@ -35,3 +35,15 @@ Button{
     font-size: 13px;
 
 }
+
+
+/*button will change colour when hover*/ 
+Button:hover{  
+    background-color: rgb(171, 169, 169);
+}
+
+/*button press effect*/ 
+Button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

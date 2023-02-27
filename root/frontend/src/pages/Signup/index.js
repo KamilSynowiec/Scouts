@@ -1,10 +1,25 @@
 import React, {useState} from "react";
 import './styles.css'; //styles
 import Footer from "../../components/Footer/Footer.js";
+import axios from 'axios';
 
 function Register(){
+    //state
     const [registerUsername, setRegisterUsername]= useState("");
     const [registerPassword, setRegisterPassword]= useState("");
+
+    //method registering user
+    const register = () =>{
+        axios({ //axios http client for the browser (library that helps us send all the requests)
+            method: "post",
+            data: {
+                username: registerUsername,
+                password: registerPassword
+            },
+            withCredentials: true,
+            url: "http://localhost:4000/register",
+        }).then((res)=> console.log(res));
+    };
 
 
     return(
@@ -20,7 +35,7 @@ function Register(){
                     </div>
 
                     <div>
-                        <button>Register</button>
+                        <button type="submit" onClick={register}>Register</button>
                     </div>
                 </div>
             </div>

@@ -41,9 +41,18 @@ function Login(){
                             <a href="" onClick={password} id="fpassword">Forgot password</a>
                         </div>
                         <div id="button-right">
-                            <button type="submit" onClick={login}>Login</button>
+                            <button id="loginButton" type="submit" onClick={login}>Login</button>
                         </div>
                       
+                    </div>
+                    <div>
+                        <div id="second-left">
+                            <h6>Do not have an account yet? Sign up here:</h6>
+                        </div>
+                        <div id="second-right">
+                            <button id="registerButton" type="submit">Register</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

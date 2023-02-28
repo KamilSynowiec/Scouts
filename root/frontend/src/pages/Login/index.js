@@ -47,7 +47,7 @@ function Login(){
                     </div>
                     <div>
                         <div id="second-left">
-                            <h6>Do not have an account yet? Sign up here:</h6>
+                            <p>Do not have an account yet? Sign up here:</p>
                         </div>
                         <div id="second-right">
                             <button id="registerButton" type="submit">Register</button>

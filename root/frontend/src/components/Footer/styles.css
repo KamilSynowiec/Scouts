@@ -12,8 +12,17 @@
 
 
 .footer-elements{
-    font-size: 14px;
+    font-size: 2vh;
     padding:20px;
     text-decoration: none;
     color:rgb(98, 98, 98);
+  }
+
+
+  .footer-elements:hover{
+    color: #714288;
+  }
+
+  .footer-elements::selection{
+    background-color: #CAABD8;
   }

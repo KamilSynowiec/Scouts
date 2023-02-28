@@ -8,6 +8,7 @@ const bcrypt = require("bcryptjs");
 const expressSession = require("express-session");   //express session creates new memorystore instance to store  session data in a server
 const bodyParser = require("body-parser");
 const app = express();
+const User = require('./user');
 
 mongoose.connect("mongodb+srv://Kamil:dXOkq6gzwPhbIQ4O@cluster0.ct0wmof.mongodb.net/?retryWrites=true&w=majority",
 {
@@ -54,7 +55,24 @@ app.post("/login", (req, res)=>{
 });
 
 app.post("/register", (req, res)=>{
-    console.log(req.body);
+    User.findOne({username: req.body.username}, async (error,doc)=>{   //checking if user exists in database already
+        if(error){   
+            throw error;    //throws error
+        }
+        if(doc){    //user found in database
+            res.send("User already Exists");   
+        }  
+        if(!doc){     //if user doesnt exist then create new one
+            const hashedPassword = await bcrypt.hash(req.body.password, 10); //hashing password with salt 10 ()
+
+            const newUser = new User({
+                username: req.body.username,
+                password: req.body.password
+            });
+            await newUser.save(); //await being send
+            res.send("User Created");
+        }
+    })
 });
 
 app.post("/user", (req,res)=>{

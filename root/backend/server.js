@@ -52,8 +52,6 @@ app.post("/user", (req,res)=>{
 });
 
 
-
-
 app.listen(4000, ()=> {
     console.log("Server up and running...");
 });

@@ -1,12 +1,12 @@
-//import Login from "./pages/Login/index.js";
+import Login from "./pages/Login/index.js";
 import Register from "./pages/Signup/index.js";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Register className="App-Login">
-      </Register>
+      <Login className="App-Login">
+      </Login>
     </div>
   );
 }

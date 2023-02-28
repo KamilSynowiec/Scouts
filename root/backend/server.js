@@ -7,8 +7,18 @@ const cookieParser = require("cookie-parser");   //used to parse header to store
 const bcrypt = require("bcryptjs");
 const expressSession = require("express-session");   //express session creates new memorystore instance to store  session data in a server
 const bodyParser = require("body-parser");
-
 const app = express();
+
+mongoose.connect("mongodb+srv://Kamil:dXOkq6gzwPhbIQ4O@cluster0.ct0wmof.mongodb.net/?retryWrites=true&w=majority",
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+},
+()=>{
+    console.log("Mongoose Is Connected");
+}
+);
+
 
 //Middlewares
 app.use(bodyParser.json());

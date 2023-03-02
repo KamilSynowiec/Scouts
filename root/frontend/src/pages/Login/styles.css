@@ -1,10 +1,12 @@
-::selection{
+/*::selection{
     background-color: #CAABD8;
-  }
+    color: #714288;
+  }*/
 
 h1{
     margin-top:40px;
     font-size: 10vh;
+    font-family: "Nunito Sans";
 }
 
 #login-form{
@@ -33,7 +35,7 @@ input{
 
 #password{
     margin:10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     height: 7vh;
     width: 31vw;
     border-radius: 25px;
@@ -49,9 +51,9 @@ input{
     height: 7vh;
     width: 12vw;
     color: #714288;
-    font-size: 2vh;
+    font-size: 3vh;
     margin-left:9vw;
-    margin-top:-10vh;
+    margin-top:0vh;
 
 }
 
@@ -87,7 +89,7 @@ input{
 
 #second-left{
     text-align: center;
-    margin-right:12vw;
+    margin-right:15vw;
     margin-top: 15vh;
     font-size: 2vh;
 }

@@ -55,7 +55,7 @@ app.use(express.static("../frontend"));
 
 
 /* ----------------------------------------------ROUTES--------------------------------------------------------- */
-app.post("/login", (req, res)=>{
+app.post("/login", (req, res, next)=>{
     console.log(req.body);
     passport.authenticate("local", (error, user, info)=>{
         if(error){
@@ -64,7 +64,7 @@ app.post("/login", (req, res)=>{
         if(!user){
             res.send("The user doesn't exists");
         }else{
-            req.logIn((user, error)=>{
+            req.logIn(user, (error)=>{
                 if(error){
                     throw error;
                 }else{
@@ -73,7 +73,7 @@ app.post("/login", (req, res)=>{
                 }
             });
         }
-    });
+    })(req, res, next);
 });
 
 app.post("/register", (req, res)=>{

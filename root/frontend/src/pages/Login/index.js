@@ -50,7 +50,7 @@ function Login(){
                             <p>Do not have an account yet? Sign up here:</p>
                         </div>
                         <div id="second-right">
-                            <button id="registerButton" type="submit">Register</button>
+                            
                         </div>
                         
                     </div>

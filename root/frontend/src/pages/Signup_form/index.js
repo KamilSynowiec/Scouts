@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import './styles.css'; //styles
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer.js";
 
 function Register(){
     //state
@@ -30,6 +32,7 @@ function Register(){
         <div>
             <div>
                 <h1>Register form</h1>
+                <Link to="/login"><button id="login_button">Back to Login</button></Link>
                 <div id="register-form">
                     <div>
                         <label for="firstName">First name: </label>
@@ -64,6 +67,7 @@ function Register(){
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

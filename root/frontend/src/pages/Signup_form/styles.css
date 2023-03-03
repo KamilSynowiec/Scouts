@@ -34,7 +34,8 @@
 #group{
     margin: 10px;
     height: 7vh; 
-    width: 24vw;
+    width: 33vw;
+    margin-left:35px;
     border-radius: 25px;
     border-style: solid ;
     border-color:#caabd8;
@@ -48,4 +49,16 @@
 
 #submitButton{
     margin-top:10px;
+}
+#login_button{
+    border-radius: 5px;
+    border: none;
+    background-color:#caabd8;
+    height: 6vh;
+    width: 15vh;
+    color: #714288;
+    font-size: 1.8vh;
+    margin-top:-10px;
+    margin-left:230px;
+    margin-bottom: -20px;
 }

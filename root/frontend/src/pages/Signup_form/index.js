@@ -10,6 +10,7 @@ function Register(){
     const [registerLastName, setRegisterLastName]= useState("");
     const [registerUsername, setRegisterUsername]= useState("");
     const [registerPassword, setRegisterPassword]= useState("");
+    const [registerAgeGroup, setRegisterAgeGroup]= useState("");
     
 
     //method registering user
@@ -20,7 +21,8 @@ function Register(){
                 firstname: registerFirstName,
                 lastname: registerLastName,
                 username: registerUsername,
-                password: registerPassword
+                password: registerPassword,
+                agegroup: registerAgeGroup
             },
             withCredentials: true,
             url: "http://localhost:4000/register",
@@ -51,14 +53,14 @@ function Register(){
                     </div>
                     <div id="group_div">
                     <label for="group" class="labels">Age Group: </label>
-                    <select name="group" id="group" >  
+                    <select name="group" id="group" onChange={e=> setRegisterAgeGroup(e.target.value)}>  
                         <option id="option_name" value="">Select</option> 
-                        <option value="6">Network: 18-15years</option>
-                        <option value="5">Explorers: 14-18 years</option> 
-                        <option value="4">Scouts: 10,5-14 years</option>  
-                        <option value="3">Cubs: 8-10,5 years</option>
-                        <option value="2">Beavers: 6-8 years</option> 
-                        <option value="1">Squirrels: 4-6 years</option>  
+                        <option value="Network: 18-25years">Network: 18-25years</option>
+                        <option value="Explorers: 14-18 years">Explorers: 14-18 years</option> 
+                        <option value="Scouts: 10,5-14 years">Scouts: 10,5-14 years</option>  
+                        <option value="Cubs: 8-10,5 years">Cubs: 8-10,5 years</option>
+                        <option value="Beavers: 6-8 years">Beavers: 6-8 years</option> 
+                        <option value="Squirrels: 4-6 years">Squirrels: 4-6 years</option>  
                     </select>
                     </div>
 

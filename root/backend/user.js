@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const user = new mongoose.Schema({
-    firstname: firstname,
-    lastname: lastname,
+    firstname: String,
+    lastname: String,
     username: String,
-    password: String
+    password: String,
+    agegroup: String
 });
 
 module.exports = mongoose.model("User", user);  //export this function so that other files are allowed to access it

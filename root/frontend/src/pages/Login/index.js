@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './styles.css'; //styles
 import Footer from "../../components/Footer/Footer.js";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 function Login(){
     //state
@@ -48,6 +49,7 @@ function Login(){
                     <div>
                         <div id="second-left">
                             <p>Do not have an account yet? Sign up here:</p>
+                            <Link to="/register">Register</Link>
                         </div>
                         <div id="second-right">
                             

@@ -1,0 +1,51 @@
+#submitButton{
+    border-radius: 5px;
+    border: none;
+    background-color:#caabd8;
+    height: 6vh;
+    width: 15vh;
+    color: #714288;
+    font-size: 1.8vh;
+}
+
+/*register button press effect*/ 
+#submitButton:active{
+    box-shadow: 0 5px #714288;
+    transform: translateY(4px);
+}
+
+.fields{
+    margin: 10px;
+    height: 7vh; 
+    width: 31vw;
+    border-radius: 25px;
+    border-style: solid ;
+    border-color:#caabd8;
+    font-size: 3.3vh;
+}
+
+#register-form{
+    text-align: center;
+}
+
+#email{
+    margin-left:36px;
+}
+#group{
+    margin: 10px;
+    height: 7vh; 
+    width: 24vw;
+    border-radius: 25px;
+    border-style: solid ;
+    border-color:#caabd8;
+    font-size: 2vh;
+    text-indent:10px;
+}
+
+#group_div{
+   margin-left: 40px;
+}
+
+#submitButton{
+    margin-top:10px;
+}

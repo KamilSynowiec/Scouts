@@ -10,6 +10,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const User = require('./user');
 
+
+/* ---------------------------------END OF IMPORTS------------------------------------------------------ */
+
 mongoose.connect("mongodb+srv://Kamil:dXOkq6gzwPhbIQ4O@cluster0.ct0wmof.mongodb.net/?retryWrites=true&w=majority",
 {
     useNewUrlParser: true,
@@ -21,7 +24,7 @@ mongoose.connect("mongodb+srv://Kamil:dXOkq6gzwPhbIQ4O@cluster0.ct0wmof.mongodb.
 );
 
 
-//Middlewares
+/* ---------------------------------MIDDLEWARES----------------------------------------------------------- */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -39,12 +42,19 @@ app.use(expressSession({
 //whenever you call the secret inside session you need to use cookieParser
 app.use(cookieParser("secretcode"));
 
+app.use(passport.initialize());
+app.use(passport.session());
+require('./passportConfig')(passport);
+
 //serving public file
 app.use(express.static("../frontend"));
 
 
+/* -------------------------------------END OF MIDDLEWARES------------------------------------------------------ */
 
-//Routes
+
+
+/* ----------------------------------------------ROUTES--------------------------------------------------------- */
 app.post("/login", (req, res)=>{
     console.log(req.body);
 });

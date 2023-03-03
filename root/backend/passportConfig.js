@@ -25,8 +25,25 @@ module.exports = function(passport){
                         }
                     });
                 }
-
             });
         })
     );
+
+
+    passport.serializeUser((user, callback)=>{  //this method stores cookie inside a browser
+        callback(null, user.id);
+    });
+
+    passport.deserializeUser((id, callback)=>{
+        User.findOne({_id: id}, (error, user)=>{
+            callback(error, user);
+        });
+    });
+
+
+
+
+
 }
+
+

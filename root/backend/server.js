@@ -57,11 +57,23 @@ app.use(express.static("../frontend"));
 /* ----------------------------------------------ROUTES--------------------------------------------------------- */
 app.post("/login", (req, res)=>{
     console.log(req.body);
-});
-
-
-app.post("/login", (req, res)=>{
-    console.log(req.body);
+    passport.authenticate("local", (error, user, info)=>{
+        if(error){
+            throw error;
+        }
+        if(!user){
+            res.send("The user doesn't exists");
+        }else{
+            req.logIn((user, error)=>{
+                if(error){
+                    throw error;
+                }else{
+                    res.send("Succesfully authenticated");
+                    console.log("req.user");
+                }
+            });
+        }
+    });
 });
 
 app.post("/register", (req, res)=>{
@@ -88,6 +100,9 @@ app.post("/register", (req, res)=>{
 app.post("/user", (req,res)=>{
     console.log(req.body);
 });
+
+
+/* ----------------------------------------------END OF ROUTES----------------------------------------------------- */
 
 
 app.listen(4000, ()=> {

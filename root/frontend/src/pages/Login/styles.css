@@ -11,7 +11,7 @@ h1{
 }
 
 #login-form{
-    margin-top: 10vh;
+    margin-top: 5vh;
     padding-left:10vw;
     padding-right:10vw;
     text-align: center;
@@ -25,7 +25,7 @@ h1{
     border-radius: 25px;
     border-style: solid ;
     border-color:#caabd8;
-    font-size: 3.3vh;
+    font-size: 3vh;
 }
 
 input{
@@ -44,7 +44,7 @@ input{
     border-radius: 25px;
     border-style: solid ;
     border-color:#caabd8;
-    font-size: 3.3vh;
+    font-size: 3vh;
 }
 
 #loginButton{
@@ -54,7 +54,7 @@ input{
     height: 7vh;
     width: 12vw;
     color: #714288;
-    font-size: 3vh;
+    font-size: 2.5vh;
     margin-left:9vw;
     margin-top:0vh;
 
@@ -73,35 +73,11 @@ input{
 }
 
 
-#registerButton{
-    border-radius: 5px;
-    border: none;
-    background-color:#caabd8;
-    height: 6vh;
-    width: 15vh;
-    color: #714288;
-    font-size: 1.8vh;
-}
-
-/*register button press effect*/ 
-#registerButton:active{
-    box-shadow: 0 5px #714288;
-    transform: translateY(4px);
-}
 
 #second-left{
     text-align: center;
-    margin-right:15vw;
     margin-top: 15vh;
-    font-size: 2vh;
-}
-
-
-#second-right{
-    text-align: center;
-    margin-top:-50vh;
-    margin-left:16vw;
-
+    font-size: 2.5vh;
 }
 
 #button-left{
@@ -112,7 +88,7 @@ input{
 #fpassword{
     text-decoration: none;
     color: black;
-    font-size: 2vh;
+    font-size: 2.5vh;
     font-family: 'Monospace';
     text-decoration: underline;
 }

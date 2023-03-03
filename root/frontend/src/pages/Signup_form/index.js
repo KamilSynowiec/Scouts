@@ -32,27 +32,27 @@ function Register(){
         <div>
             <div>
                 <h1>Register form</h1>
-                <Link to="/login"><button id="login_button">Back to Login</button></Link>
                 <div id="register-form">
                     <div>
-                        <label for="firstName">First name: </label>
+                        <label for="firstName" class="labels">First name: </label>
                         <input class="fields" placeholder="firstname" onChange={e => setRegisterFirstName(e.target.value)}/>
                     </div>
                     <div>
-                        <label for="lastname">Last name: </label>
+                        <label for="lastname" class="labels">Last name: </label>
                         <input class="fields" placeholder="lastname" onChange={e => setRegisterLastName(e.target.value)}/>
                     </div>
                     <div>
-                        <label for="username">Email: </label>
+                        <label for="username" class="labels">Email: </label>
                         <input id="email" class="fields" placeholder="email" onChange={e => setRegisterUsername(e.target.value)}/>
                     </div>
                     <div>
-                        <label for="password">Password: </label>
-                        <input id="password" class="fields" placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
+                        <label for="password" class="labels">Password: </label>
+                        <input class="fields" placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
                     </div>
                     <div id="group_div">
-                    <select name="group" id="group">  
-                        <option id="option_name" value="">Select your age group</option> 
+                    <label for="group" class="labels">Age Group: </label>
+                    <select name="group" id="group" >  
+                        <option id="option_name" value="">Select</option> 
                         <option value="6">Network: 18-15years</option>
                         <option value="5">Explorers: 14-18 years</option> 
                         <option value="4">Scouts: 10,5-14 years</option>  
@@ -62,7 +62,8 @@ function Register(){
                     </select>
                     </div>
 
-                    <div>
+                    <div id="buttons">
+                        <Link to="/login"><button id="login_button">Back to Login</button></Link>
                         <button id="submitButton" type="submit" onClick={register}>Register</button>
                     </div>
                 </div>

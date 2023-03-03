@@ -1,11 +1,6 @@
-#submitButton{
-    border-radius: 5px;
-    border: none;
-    background-color:#caabd8;
-    height: 6vh;
-    width: 15vh;
-    color: #714288;
-    font-size: 1.8vh;
+/*font family*/
+:root{
+    --fontsizes: 2.5vh;
 }
 
 /*register button press effect*/ 
@@ -16,12 +11,12 @@
 
 .fields{
     margin: 10px;
-    height: 7vh; 
-    width: 31vw;
+    height: 6vh; 
+    width: 27vw;
     border-radius: 25px;
     border-style: solid ;
     border-color:#caabd8;
-    font-size: 3.3vh;
+    font-size: var(--fontsizes);
 }
 
 #register-form{
@@ -29,36 +24,54 @@
 }
 
 #email{
-    margin-left:36px;
+    margin-left:40px;
 }
 #group{
     margin: 10px;
-    height: 7vh; 
-    width: 33vw;
-    margin-left:35px;
+    height: 6vh; 
+    width: 28vw;
+   
     border-radius: 25px;
     border-style: solid ;
     border-color:#caabd8;
-    font-size: 2vh;
+    border-width: 2px;
+    font-size: var(--fontsizes);
     text-indent:10px;
+    color: rgb(216, 215, 215);
 }
 
+
 #group_div{
-   margin-left: 40px;
+   margin-right:10px;
 }
 
 #submitButton{
-    margin-top:10px;
-}
-#login_button{
+    margin-top:20px;
+    margin-left: 70px;
+    height: 7vh;
+    width: 18vh;
     border-radius: 5px;
     border: none;
     background-color:#caabd8;
-    height: 6vh;
-    width: 15vh;
     color: #714288;
-    font-size: 1.8vh;
-    margin-top:-10px;
-    margin-left:230px;
-    margin-bottom: -20px;
+}
+#login_button{
+    margin-top:20px;
+    border-radius: 5px;
+    border: none;
+    background-color:#caabd8;
+    height: 7vh;
+    width: 18vh;
+    color: #714288;
+    
+}
+#buttons{
+    text-align: center;
+    margin-left:70px;
+    font-size: var(--fontsizes);
+}
+
+.labels{
+    font-size: var(--fontsizes);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

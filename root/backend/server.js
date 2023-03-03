@@ -89,7 +89,9 @@ app.post("/register", (req, res)=>{
 
             const newUser = new User({
                 username: req.body.username,
-                password: hashedPassword
+                password: hashedPassword,
+                firstname: req.body.firstname,
+                lastname: req.body.lastname
             });
             await newUser.save(); //await being send
             res.send("User Created");

@@ -2,7 +2,6 @@ import Login from "./pages/Login/index.js";
 import Register from "./pages/Signup_form/index.js";
 import Home from "./pages/Home/index.js";
 import { Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
 
 function App() {
 

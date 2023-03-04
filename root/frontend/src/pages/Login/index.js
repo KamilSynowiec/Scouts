@@ -3,6 +3,7 @@ import './styles.css'; //styles
 import Footer from "../../components/Footer/Footer.js";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import Navigate from "react";
 
 function Login(){
     //state
@@ -25,6 +26,7 @@ function Login(){
                 document.getElementById("loginInfo").innerHTML="The user doesn't exist";
             }else{
                console.log(res.data);
+               window.location.href = "/home";
             }
         });
     };

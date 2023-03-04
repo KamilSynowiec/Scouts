@@ -37,7 +37,7 @@ function Register(){
                 <div id="register-form">
                     <div>
                         <label for="firstName" class="labels">First name: </label>
-                        <input class="fields" placeholder="firstname" onChange={e => setRegisterFirstName(e.target.value)}/>
+                        <input className="fields" placeholder="firstname" onChange={e => setRegisterFirstName(e.target.value)}/>
                     </div>
                     <div>
                         <label for="lastname" class="labels">Last name: </label>

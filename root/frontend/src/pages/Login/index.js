@@ -19,7 +19,14 @@ function Login(){
             },
             withCredentials: true,
             url: "http://localhost:4000/login",
-        }).then((res)=> console.log(res));
+        }).then((res)=> {   //response user object containing name, surname, group etc
+            if(res.data=="The user doesn't exist"){  
+                console.log("The user doesn't exist");
+                document.getElementById("loginInfo").innerHTML="The user doesn't exist";
+            }else{
+               console.log(res.data);
+            }
+        });
     };
 
     const password = () =>{
@@ -29,8 +36,9 @@ function Login(){
     return(
         <div>
             <div>
-                <h1>Scouts</h1>
+                <h1 id="h1">Scouts</h1>
                 <div id="login-form">
+                    <p id="loginInfo"></p>
                     <div id="upper">
                         <input id="username" placeholder="username" onChange={e => setloginUsername(e.target.value)}/>
                     </div>

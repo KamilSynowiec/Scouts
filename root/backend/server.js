@@ -68,8 +68,7 @@ app.post("/login", (req, res, next)=>{
                 if(error){
                     throw error;
                 }else{
-                    res.send("Succesfully authenticated");
-                    console.log("req.user");
+                    res.send(req.user);
                 }
             });
         }

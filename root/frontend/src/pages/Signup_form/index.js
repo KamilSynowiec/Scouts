@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import './styles.css'; //styles
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer.js";
+import { useNavigate } from "react-router-dom";
 
 function Register(){
     //state
@@ -11,6 +12,8 @@ function Register(){
     const [registerUsername, setRegisterUsername]= useState("");
     const [registerPassword, setRegisterPassword]= useState("");
     const [registerAgeGroup, setRegisterAgeGroup]= useState("");
+
+    const navigate = useNavigate();
     
 
     //method registering user
@@ -26,7 +29,16 @@ function Register(){
             },
             withCredentials: true,
             url: "http://localhost:4000/register",
-        }).then((res)=> console.log(res));
+        }).then((res)=> {
+            if(res.data!="User already Exists"){
+                navigate('/login');
+            }else{
+                console.log("User already exist, no navigate");
+            }
+        }
+        
+        );
+        
     };
 
 

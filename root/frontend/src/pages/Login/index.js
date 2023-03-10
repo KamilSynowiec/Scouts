@@ -3,12 +3,15 @@ import './styles.css'; //styles
 import Footer from "../../components/Footer/Footer.js";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import Navigate from "react";
+import { useNavigate } from 'react-router-dom';  //for redirecting to home page
+
 
 function Login(){
     //state
     const [loginUsername, setloginUsername]= useState("");
     const [loginPassword, setloginPassword]= useState("");
+
+    const navigate = useNavigate();
 
     //method logging user in
     const login = () =>{
@@ -21,13 +24,20 @@ function Login(){
             withCredentials: true,
             url: "http://localhost:4000/login",
         }).then((res)=> {   //response user object containing name, surname, group etc
+            console.log(res);
+            
             if(res.data=="The user doesn't exist"){  
                 console.log("The user doesn't exist");
-                document.getElementById("loginInfo").innerHTML="The user doesn't exist";
-            }else{
-               console.log(res.data);
-               window.location.href = "/home";
+
+                //this.ref.textInput.value="The user doesn't exist";
             }
+            
+            if(res.data.hasOwnProperty('firstname')){
+
+                document.cookie=JSON.stringify(res.data); //converting object to string to store in cookie
+                navigate('/home');
+            }
+            
         });
     };
 
@@ -40,7 +50,6 @@ function Login(){
             <div>
                 <h1 id="h1">Scouts</h1>
                 <div id="login-form">
-                    <p id="loginInfo"></p>
                     <div id="upper">
                         <input id="username" placeholder="username" onChange={e => setloginUsername(e.target.value)}/>
                     </div>

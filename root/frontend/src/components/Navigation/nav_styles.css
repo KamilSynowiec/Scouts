@@ -1,0 +1,49 @@
+#logo{
+    margin-left:10px;
+    margin-top:20px;
+}
+
+#header{
+    margin-top:-20px;
+    margin-bottom:20px;
+    font-size: 36px;
+}
+
+button{
+    border-radius: 25px;
+    border-style: none;
+    font-size:1vw;
+    width:5vw;
+    height: 4vh;
+}
+
+#nav_div{
+    margin-left:5vw;
+}
+
+.nav_buttons{
+    margin-left:20px;
+    
+    width:11vw;
+    height: 5vh;
+    font-size:1vw;
+}
+
+@media screen and (max-width: 800px){
+    .nav_buttons{
+        font-size:1.6vw;
+        width: 11vw;
+    }
+    #logout_button{
+        font-size:1.6vw;
+        width: 7vw;
+    }
+
+}
+
+#logout_button_div{
+    text-align: right;
+    margin-right:20px;
+    margin-top:-60px;
+    margin-bottom:40px;
+}

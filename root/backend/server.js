@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const User = require('./user');
 
+var path=require("path");
 
 /* ---------------------------------END OF IMPORTS------------------------------------------------------ */
 
@@ -75,6 +76,21 @@ app.post("/login", (req, res, next)=>{
     })(req, res, next);
 });
 
+app.post("/logout", async (req,res,next)=>{
+
+    console.log("I am running");
+
+    req.logout((err)=>{ //logout will terminate session
+        if(err){
+    
+            return next(err);
+        }else{
+           res.send({"redirect":"yes"});
+        }
+    });
+
+});
+
 app.post("/register", (req, res)=>{
     User.findOne({username: req.body.username}, async (error,doc)=>{   //checking if user exists in database already
         if(error){   
@@ -98,11 +114,6 @@ app.post("/register", (req, res)=>{
         }
     })
 });
-
-app.post("/user", (req,res)=>{
-    console.log(req.body);
-});
-
 
 /* ----------------------------------------------END OF ROUTES----------------------------------------------------- */
 

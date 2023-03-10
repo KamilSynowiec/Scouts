@@ -26,12 +26,16 @@ function Navigation(){
             console.log(error)
         }
     };
+
+    function personalInfo(){
+        navigate("/personalInfo");
+    }
     
 
     return(
         <div id="container">
             <div>
-                <img id="logo" src="" alt="logo"></img> {/*logo*/}
+                <img id="logo" src="../../assets/logo2.png" alt="logo"/>{/*logo*/}
                 <h1 id="header">{user.firstname}'s portfolio</h1>
                 <div id="logout_button_div">
                     <button id="logout_button" onClick={logout}>logout</button>  {/*logout button*/}
@@ -45,7 +49,7 @@ function Navigation(){
                 <button class="nav_buttons">Your skills</button>
                 <button class="nav_buttons">Contact your leader</button>
                 <button class="nav_buttons">Shareboard</button>
-                <button class="nav_buttons">Personal Information</button>
+                <button class="nav_buttons" onClick={personalInfo}>Personal Information</button>
             </div>
 
         </div>

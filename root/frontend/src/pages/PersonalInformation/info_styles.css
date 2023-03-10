@@ -1,0 +1,29 @@
+#info_header{
+    text-align: left;
+    margin-top: 70px;
+    margin-left:10vw;
+}
+
+#info_list{
+    margin-left: 10vw;
+    text-align: left;
+}
+
+.info_li_elements{
+    background-color: #caabd8;
+    color: #714288;
+    margin:15px;
+    border-radius: 25px;
+    width:40vw;
+    height: 3.8vh;
+    font-size: 1.4vw;
+    padding-top:5px;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .info_li_elements{
+        font-size: 2vw;
+        padding-top:10px;
+    }
+}

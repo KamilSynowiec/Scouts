@@ -6,7 +6,8 @@
 #header{
     margin-top:-20px;
     margin-bottom:20px;
-    font-size: 36px;
+    font-size: 38px;
+    font-family: "Nunito Sans";
 }
 
 button{
@@ -15,6 +16,8 @@ button{
     font-size:1vw;
     width:5vw;
     height: 4vh;
+    background-color:#caabd8;
+    color: #714288;
 }
 
 #nav_div{

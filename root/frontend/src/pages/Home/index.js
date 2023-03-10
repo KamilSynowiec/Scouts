@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer/Footer.js";
 import Navigation from "../../components/Navigation/index.js";
 import { useNavigate } from "react-router-dom";
+import './home_styles.css';
 
 function Home(){
 

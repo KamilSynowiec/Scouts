@@ -1,12 +1,14 @@
 #logo{
-    margin-left:10px;
-    margin-top:20px;
+    margin-left:20px;
+    margin-top:-30px;
+    width:15vw;
+    margin-bottom:-50px;
 }
 
 #header{
-    margin-top:-20px;
-    margin-bottom:20px;
-    font-size: 38px;
+    margin-top:-4vw;
+    margin-bottom:40px;
+    font-size: 3vw;
     font-family: "Nunito Sans";
 }
 
@@ -14,8 +16,8 @@ button{
     border-radius: 25px;
     border-style: none;
     font-size:1vw;
-    width:5vw;
-    height: 4vh;
+    width:4vw;
+    height: 3vh;
     background-color:#caabd8;
     color: #714288;
 }
@@ -27,21 +29,36 @@ button{
 .nav_buttons{
     margin-left:20px;
     
-    width:11vw;
-    height: 5vh;
-    font-size:1vw;
+    width:10vw;
+    height: 4vh;
+    font-size:0.9vw;
+    
 }
 
 @media screen and (max-width: 800px){
     .nav_buttons{
-        font-size:1.6vw;
+        font-size:1.4vw;
         width: 11vw;
     }
     #logout_button{
-        font-size:1.6vw;
+        font-size:1.4vw;
         width: 7vw;
     }
+}
 
+@media screen and (max-width: 1000px){
+    #header{
+        margin-top:-2vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #header{
+        margin-top:0vw;
+    }
+    .nav_buttons{
+        font-size: 1.4vw;
+    }
 }
 
 #logout_button_div{

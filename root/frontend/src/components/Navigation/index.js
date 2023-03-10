@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';  //for redirecting to login page
 import './nav_styles.css'; //styles
+import logo from '../../assets/scouts_logo.png';
 
 
 function Navigation(){
@@ -35,7 +36,7 @@ function Navigation(){
     return(
         <div id="container">
             <div>
-                <img id="logo" src="../../assets/logo2.png" alt="logo"/>{/*logo*/}
+                <img id="logo" src={logo} alt="logo"/>{/*logo*/}
                 <h1 id="header">{user.firstname}'s portfolio</h1>
                 <div id="logout_button_div">
                     <button id="logout_button" onClick={logout}>logout</button>  {/*logout button*/}
@@ -43,7 +44,7 @@ function Navigation(){
             </div>
 
             <div id="nav_div"> {/*navigation buttons*/}
-                <button class="nav_buttons">Portfolio</button>
+                <button class="nav_buttons">Portfolio</button>  {/*</a><img src={logo} />*/}
                 <button class="nav_buttons">Your goal</button>
                 <button class="nav_buttons">Calendar</button>
                 <button class="nav_buttons">Your skills</button>

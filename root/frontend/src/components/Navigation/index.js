@@ -16,8 +16,9 @@ function Navigation(){
 
         try{
             const response = await axios({ method: "POST",url: "http://localhost:4000/logout", withCredentials: true})
-            if(response.data.redirect=="yes"){
-                navigate('/');
+            if(response.data.redirect=="yes"){  
+                
+                navigate('/');  //navigating to login page
             }
             else
             {
@@ -35,6 +36,9 @@ function Navigation(){
     function yourGoal(){
         navigate("/yourGoal");
     }
+    function portfolio(){
+        navigate("/portfolio");
+    }
     
 
     return(
@@ -48,7 +52,7 @@ function Navigation(){
             </div>
 
             <div id="nav_div"> {/*navigation buttons*/}
-                <button class="nav_buttons">Portfolio</button>  {/*</a><img src={logo} />*/}
+                <button class="nav_buttons" onClick={portfolio}>Portfolio</button>  {/*</a><img src={logo} />*/}
                 <button class="nav_buttons" onClick={yourGoal}>Your goal</button>
                 <button class="nav_buttons">Calendar</button>
                 <button class="nav_buttons">Your skills</button>

@@ -36,6 +36,7 @@ function Login(){
 
                 document.cookie=JSON.stringify(res.data); //converting object to string to store in cookie
                 navigate('/home');
+                
             }
             
         });

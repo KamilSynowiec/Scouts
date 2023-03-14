@@ -1,31 +1,24 @@
 import Footer from "../../components/Footer/Footer.js";
 import Navigation from "../../components/Navigation/index.js";
 import { useNavigate } from "react-router-dom";
-import './home_styles.css';
 
-function Home(){
+function Portfolio(){
 
     const navigate = useNavigate();
 
-    let user=""; 
+
+    let userObj=JSON.parse(document.cookie);
     
-
-   if(typeof JSON.parse(document.cookie) != "Object"){
-    navigate("/");
-    console.log("navigating");
-   }else{
-    user=JSON.parse(document.cookie);
-
-    console.log(user);
-   }
 
     return(
         <div>
             <Navigation/>
+
+            <h2>Your achievements</h2>
             
             <Footer/>
         </div>
     );
 }
 
-export default Home;
+export default Portfolio;

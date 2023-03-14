@@ -57,7 +57,6 @@ app.use(express.static("../frontend"));
 
 /* ----------------------------------------------ROUTES--------------------------------------------------------- */
 app.post("/login", (req, res, next)=>{
-    console.log(req.body);
     passport.authenticate("local", (error, user, info)=>{
         if(error){
             throw error;
@@ -107,12 +106,30 @@ app.post("/register", (req, res)=>{
                 password: hashedPassword,
                 firstname: req.body.firstname,
                 lastname: req.body.lastname,
-                agegroup: req.body.agegroup
+                agegroup: req.body.agegroup,
+                leader: "",
+                yourGoal: ""
             });
             await newUser.save(); //await being send
             res.send("User Created");
         }
     })
+});
+
+app.post("/yourGoal", (req, res)=>{
+    console.log(req.body);
+    User.findOneAndUpdate(
+        
+        {username: req.body.username},
+        {yourGoal: req.body.yourGoal}, 
+        (error, data)=>{
+            if(error){
+                res.send(error);
+            }else{
+                res.send(req.body);
+            }
+        }
+    );
 });
 
 /* ----------------------------------------------END OF ROUTES----------------------------------------------------- */

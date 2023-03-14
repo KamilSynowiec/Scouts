@@ -5,7 +5,9 @@ const user = new mongoose.Schema({
     lastname: String,
     username: String,
     password: String,
-    agegroup: String
+    agegroup: String,
+    leader: String,
+    yourGoal: String
 });
 
 module.exports = mongoose.model("User", user);  //export this function so that other files are allowed to access it

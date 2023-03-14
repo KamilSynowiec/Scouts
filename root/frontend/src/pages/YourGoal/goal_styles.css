@@ -1,0 +1,45 @@
+#goal_header{
+    margin-top: 5vh;
+    text-align: center;
+    
+}
+
+#inputGoal{
+    border-radius: 25px;
+    border-style:solid;
+    border-color:#caabd8;
+    width: 22vw;
+    height: 5vh;
+
+}
+
+#yourGoal{
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#setGoalBtn{
+    margin-left: 10px;
+    width:5vw;
+    height:4vh;
+}
+
+#goalDisplay{
+    margin-top: -30px;
+    text-align: center;
+    color: #714288;
+    font-size: 3vw; 
+}
+
+@media screen and (max-width: 1000px){
+    #setGoalBtn{
+        width: 6vw;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #setGoalBtn{
+        width:7vw;
+    }
+}
+

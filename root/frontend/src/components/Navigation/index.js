@@ -9,6 +9,7 @@ function Navigation(){
     const navigate = useNavigate();
 
     let user=JSON.parse(document.cookie);
+    console.log(user);
    
     async function logout(){
         const loggingout = { title: 'React POST logout Request'};
@@ -31,6 +32,9 @@ function Navigation(){
     function personalInfo(){
         navigate("/personalInfo");
     }
+    function yourGoal(){
+        navigate("/yourGoal");
+    }
     
 
     return(
@@ -45,7 +49,7 @@ function Navigation(){
 
             <div id="nav_div"> {/*navigation buttons*/}
                 <button class="nav_buttons">Portfolio</button>  {/*</a><img src={logo} />*/}
-                <button class="nav_buttons">Your goal</button>
+                <button class="nav_buttons" onClick={yourGoal}>Your goal</button>
                 <button class="nav_buttons">Calendar</button>
                 <button class="nav_buttons">Your skills</button>
                 <button class="nav_buttons">Contact your leader</button>

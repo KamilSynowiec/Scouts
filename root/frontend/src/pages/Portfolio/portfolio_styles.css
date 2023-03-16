@@ -1,0 +1,39 @@
+.center{
+    text-align: center;
+}
+#right{
+    text-align: right;
+    margin-top: -100px;
+}
+
+#portfolio_list{
+    list-style-type: none;
+}
+
+.portfolio_list_el{
+    margin-top: 20px;
+    background-color: #caabd8;
+    color: #714288;
+    border-radius: 25px;
+    width:50vw;
+    height: 4vh;
+    font-size: 1.4vw;
+    margin-left: 20vw; 
+    padding-top:15px;
+    padding-bottom: 5px;
+}
+
+#deleteBtn{
+   color: #714288;
+   margin-left: 40vw;
+ 
+}
+
+#addAchvBtn{
+    color: #714288;
+    background-color: #caabd8;
+    border-radius: 25px;
+    padding:10px;
+    font-size: 1vw;
+
+}

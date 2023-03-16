@@ -60,6 +60,7 @@ function Navigation(){
                 <button class="nav_buttons">Shareboard</button>
                 <button class="nav_buttons" onClick={personalInfo}>Personal Information</button>
             </div>
+            <hr></hr>
 
         </div>
     );

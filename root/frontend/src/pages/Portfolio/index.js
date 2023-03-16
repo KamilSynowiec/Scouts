@@ -20,6 +20,7 @@ const initialList=[
 function Portfolio(){
     const [list, setList]=React.useState(initialList);
     const [name, setName]=React.useState('');
+    const [showAddNew, setShowAddNew]=React.useState('');
 
     //let userObj=JSON.parse(document.cookie);
 
@@ -44,11 +45,19 @@ function Portfolio(){
         
     }
 
+    function newAchievement(){
+
+    }
+
     return(
         <div>
             <Navigation/>
 
             <div class="center">
+                
+            </div>
+
+            <div class="center" id="inputForm" style={{display:'none'}}>
                 <input type="text" value={name} onChange={handleChange}/>
                 <button type="button" onClick={handleAdd}>
                     Add
@@ -75,7 +84,7 @@ function Portfolio(){
             </div>
 
             <div id="right">
-                <span id="addAchvBtn">Add new Achievement</span>
+                <span id="addAchvBtn" type="button" onClick={newAchievement}>Add new Achievement</span>
             </div>
 
             

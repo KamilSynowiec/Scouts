@@ -2,6 +2,7 @@ import Footer from "../../components/Footer/Footer.js";
 import Navigation from "../../components/Navigation/index.js";
 import React from "react";
 import {v4 as uuidv4} from 'uuid';
+import { Link } from "react-router-dom";
 
 import './portfolio_styles.css';
 
@@ -20,14 +21,13 @@ const initialList=[
 function Portfolio(){
     const [list, setList]=React.useState(initialList);
     const [name, setName]=React.useState('');
-    const [showAddNew, setShowAddNew]=React.useState('');
 
-    //let userObj=JSON.parse(document.cookie);
+    let userObj=JSON.parse(document.cookie);
 
     function handleChange(event){ //handle input field's state/ saving input's value into name variable
         setName(event.target.value);
 
-
+        console.log(userObj);
     }
 
     function handleAdd(){ //add item to current list and update
@@ -57,11 +57,12 @@ function Portfolio(){
                 
             </div>
 
-            <div class="center" id="inputForm" style={{display:'none'}}>
+            <div class="center" id="inputForm" style={{display: ''}}>
                 <input type="text" value={name} onChange={handleChange}/>
                 <button type="button" onClick={handleAdd}>
                     Add
                 </button>
+
             </div>
 
             <div class="center">
@@ -84,7 +85,7 @@ function Portfolio(){
             </div>
 
             <div id="right">
-                <span id="addAchvBtn" type="button" onClick={newAchievement}>Add new Achievement</span>
+                <Link id="addAchvBtn" to="/addAchievement">Add new Achievement</Link>
             </div>
 
             

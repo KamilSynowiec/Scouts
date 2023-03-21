@@ -108,7 +108,8 @@ app.post("/register", (req, res)=>{
                 lastname: req.body.lastname,
                 agegroup: req.body.agegroup,
                 leader: "",
-                yourGoal: ""
+                yourGoal: "",
+                yourAchievements: ""
             });
             await newUser.save(); //await being send
             res.send("User Created");
@@ -122,6 +123,23 @@ app.post("/yourGoal", (req, res)=>{
         
         {username: req.body.username},
         {yourGoal: req.body.yourGoal}, 
+        (error, data)=>{
+            if(error){
+                res.send(error);
+            }else{
+                res.send(req.body);
+            }
+        }
+    );
+});
+
+app.post("/addAchievement", (req, res)=>{
+    console.log("Hello");
+    console.log(req.body);
+    User.findOneAndUpdate(
+        
+        {username: req.body.username},
+        {$push: {yourAchievement: req.body.yourAchievement}}, 
         (error, data)=>{
             if(error){
                 res.send(error);

@@ -22,7 +22,7 @@ function Login(){
                 password: loginPassword
             },
             withCredentials: true,
-            url: "3.75.158.163",
+            url: "https://real-pear-stingray-kilt.cyclic.app",
         }).then((res)=> {   //response user object containing name, surname, group etc
             console.log(res);
             

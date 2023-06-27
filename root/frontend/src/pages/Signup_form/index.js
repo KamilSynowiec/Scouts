@@ -28,7 +28,7 @@ function Register(){
                 agegroup: registerAgeGroup
             },
             withCredentials: true,
-            url: "3.75.158.163",
+            url: "https://real-pear-stingray-kilt.cyclic.app",
         }).then((res)=> {
             if(res.data!="User already Exists"){
                 navigate('/login');

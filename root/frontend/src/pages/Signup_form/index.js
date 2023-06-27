@@ -28,7 +28,7 @@ function Register(){
                 agegroup: registerAgeGroup
             },
             withCredentials: true,
-            url: "https://scouts-3vfi.onrender.com",
+            url: "3.75.158.163",
         }).then((res)=> {
             if(res.data!="User already Exists"){
                 navigate('/login');

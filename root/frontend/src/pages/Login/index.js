@@ -22,7 +22,7 @@ function Login(){
                 password: loginPassword
             },
             withCredentials: true,
-            url: "https://scouts-3vfi.onrender.com",
+            url: "3.75.158.163",
         }).then((res)=> {   //response user object containing name, surname, group etc
             console.log(res);
             
